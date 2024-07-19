@@ -9,16 +9,10 @@
       "sourceRoot": "src",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "outputPath": "dist",
-            "index": "",
-            "main": "public-api.ts",
             "tsConfig": "tsconfig.json",
-            "allowedCommonJsDependencies": [
-              "convert-units",
-              "lodash"
-            ]
+            "project": "ng-package.json"
           }
         }
       }
