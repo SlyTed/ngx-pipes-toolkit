@@ -1,6 +1,5 @@
 import { MeanPipe } from './mean.pipe';
 
-
 describe('Mean', () => {
   let pipe: MeanPipe;
 

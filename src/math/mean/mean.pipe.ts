@@ -2,7 +2,6 @@ import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
 import { mean } from 'lodash';
 
-
 /**
  * Pipe that calculates the mean of an array of numbers.
  * 
