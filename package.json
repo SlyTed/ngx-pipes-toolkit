@@ -15,6 +15,7 @@
     "url": "https://github.com/SlyTed/ngx-pipes-toolkit"
   },
   "scripts": {
+    "build": "ng build",
     "test": "vitest",
     "test:coverage": "vitest --coverage.enabled=true",
     "lint": "npx @biomejs/biome check",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.6.2",
     "@analogjs/vitest-angular": "^1.6.2",
+    "@angular-devkit/build-angular": "^18.1.1",
     "@angular/platform-browser-dynamic": "^18.1.1",
     "@biomejs/biome": "1.8.3",
     "@types/convert-units": "^2.3.9",

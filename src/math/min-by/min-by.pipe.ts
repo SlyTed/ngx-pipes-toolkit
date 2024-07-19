@@ -32,6 +32,6 @@ export class MinByPipe implements PipeTransform {
     property: K,
   ): T | null {
     if (!value?.length) return null;
-    return minBy(value, property);
+    return minBy(value, property) ?? null;
   }
 }

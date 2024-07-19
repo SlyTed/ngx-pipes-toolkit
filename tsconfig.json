@@ -1,23 +1,37 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "target": "es2020",
-    "removeComments": false,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "declaration": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "lib": ["es2017", "dom"]
+    "target": "ES2023",
+    "module": "ES2022",
+    "lib": ["ES2023", "dom"]
   },
   "references": [
     {
       "path": "./tsconfig.spec.json"
     }
-  ]
+  ],
+  "exclude": ["vite.config.mts", "src/test-setup.ts", "src/**/*.spec.ts"],
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
 }

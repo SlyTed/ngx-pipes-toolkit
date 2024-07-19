@@ -32,6 +32,6 @@ export class MaxByPipe implements PipeTransform {
     property: K,
   ): T | null {
     if (!value?.length) return null;
-    return maxBy(value, property);
+    return maxBy(value, property) ?? null;
   }
 }
