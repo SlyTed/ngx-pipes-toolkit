@@ -15,7 +15,7 @@
 
 Typically, we manipulate collections of objects fetched from a REST API, and we want to display to the users some statistics based on a property of those objects. For example, we might want to display the mean age for a collection of users.
 
-However, native Angular pipes or ones from other NPM packages like [NGX Pipes](https://www.npmjs.com/package/ngx-pipes) or [Angular Pipes](https://www.npmjs.com/package/ngx-pipes) handle **only** data from native types (i.e. `number`, `string`, or `boolean`). Consequently, it is not possible to compute directly in the template the mean age. Therefore, we need to declare a derived value from the fetched collection in the component class (signals are used for convenience):
+However, native Angular pipes or ones from other NPM packages like [NGX Pipes](https://www.npmjs.com/package/ngx-pipes) or [Angular Pipes](https://www.npmjs.com/package/angular-pipes) handle **only** data from native types (i.e. `number`, `string`, or `boolean`). Consequently, it is not possible to compute directly in the template the mean age. Therefore, we need to declare a derived value from the fetched collection in the component class (signals are used for convenience):
 
 ```typescript
 import { meanBy } from 'lodash';
@@ -129,10 +129,19 @@ Calculates the mean of an array of objects based on one of their numeric propert
 ```
 
 #### Min by
+
 Returns the item with the smallest value of an array of object based on one of their numeric property
 ```html
 <p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Alice', age: 20 }" -->
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect 1', price: 30 }" -->
+```
+
+#### Max by
+
+Returns the item with the largest value of an array of object based on one of their numeric property
+```html
+<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Bob', age: 30 }" -->
+<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect Andromeda', price: 40 }" -->
 ```
 
 ## Contributing
