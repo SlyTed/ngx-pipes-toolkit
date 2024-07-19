@@ -6,8 +6,14 @@
 - [Installation](#installation)
 - [Contributing](#contributing)
 - [Content](#content)
+  - [Array](#array)
+    - [Enumerate](#enumerate)
   - [Math](#math)
-    - [mean](#mean)
+    - [convert](#convert)
+    - [meanBy](#mean-by)
+    - [sumBy](#sum-by)
+    - [minBy](#min-by)
+    - [maxBy](#max-by)
 
 ## Motivation
 
@@ -58,9 +64,12 @@ export class DashboardComponent {
 }
 ```
 
+Moreover, the aim of **ngx-pipes-toolkit** is **not** to replace other libraries, but to complete them. Indeed, there is no duplicate pipe with the other main Angular pipes library: [NGX Pipes](https://www.npmjs.com/package/ngx-pipes).
+
+
 ## Installation
 
-1. Use NPM to install the package
+Use NPM to install the package
 
 ```bash
 $ npm install ngx-pipes-toolkit --save
@@ -71,26 +80,21 @@ $ npm install ngx-pipes-toolkit --save
 - In templates:
 
 ```html
-<p>{{ [0, 1] | mean }}</p> <!-- Returns "0.5" -->
+<p>{{ 1_000 | convert:'m':'km' }}</p> <!-- Returns "1" -->
 ```
 
 - In components:
 
 ```typescript
-import { MeanPipe } from 'ngx-pipes-toolkit';
+import { ConvertPipe } from 'ngx-pipes-toolkit';
 
 @Component({
-  // ...
-  providers: [
-    // ...
-    MeanPipe,
-  ],
+  providers: [ConvertPipe],
 })
 export class MyComponent {
-  readonly meanPipe = inject(MeanPipe);
+  readonly convertPipe = inject(ConvertPipe);
 
-  readonly mean = this.meanPipe.transform([0, 1]); // Returns "0.5"
-  // ...
+  readonly conversion = this.meanPipe.transform(1_000, 'm', 'km'); // Returns "1"
 }
 ```
 
@@ -123,6 +127,7 @@ Converts a value with its current unit to the final unit
 #### Mean by
 
 Calculates the mean of an array of objects based on one of their numeric property
+
 ```html
 <p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "25" -->
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "35" -->
@@ -131,6 +136,7 @@ Calculates the mean of an array of objects based on one of their numeric propert
 #### Sum by
 
 Calculates the sum of an array of objects based on one of their numeric property
+
 ```html
 <p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "50" -->
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "70" -->
@@ -139,6 +145,7 @@ Calculates the sum of an array of objects based on one of their numeric property
 #### Min by
 
 Returns the item with the smallest value of an array of object based on one of their numeric property
+
 ```html
 <p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Alice', age: 20 }" -->
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect 1', price: 30 }" -->
@@ -147,6 +154,7 @@ Returns the item with the smallest value of an array of object based on one of t
 #### Max by
 
 Returns the item with the largest value of an array of object based on one of their numeric property
+
 ```html
 <p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Bob', age: 30 }" -->
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect Andromeda', price: 40 }" -->
