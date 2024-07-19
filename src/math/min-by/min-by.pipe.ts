@@ -27,7 +27,7 @@ export class MinByPipe implements PipeTransform {
    *   The item with the smallest value, or `null`
    *   if the array is `null`, `undefined` or empty.
    */
-  public transform<T extends object, K extends keyof T>(
+  public transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): T | null {
