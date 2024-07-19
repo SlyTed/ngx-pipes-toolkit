@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc/spec",
+    "target": "ES2023",
+    "types": [
+      "vitest/globals",
+      "node"
+    ]
+  },
+  "files": ["src/test-setup.ts"],
+  "include": ["src/**/*.test.ts"]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ngx-pipes-toolkit",
+  "description": "Useful Angular pipes",
+  "author": "Perros Ted",
+  "version": "0.0.0",
+  "license": "MIT",
+  "keywords": [
+    "ng",
+    "ngx",
+    "angular",
+    "pipes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SlyTed/ngx-pipes-toolkit"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@analogjs/vite-plugin-angular": "^1.6.2",
+    "@angular/core": "^18.1.1",
+    "lodash": "^4.17.21",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.3",
+    "zone.js": "^0.14.8"
+  }
+}
