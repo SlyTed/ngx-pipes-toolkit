@@ -107,9 +107,13 @@ Converts a value with its current unit to the final unit
 <p>{{ 32 | convert:'F':'C' }}</p> <!-- Output: "0" -->
 ```
 
-#### Mean
+#### Mean by
 
-Calculates the mean of an array of numbers
+Calculates the mean of an array of objects based on one of their property
+```html
+<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "25" -->
+<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "35" -->
+```
 
 ## Contributing
 
