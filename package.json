@@ -9,7 +9,10 @@
     "type": "git",
     "url": "https://github.com/SlyTed/ngx-pipes-toolkit"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "npx @biomejs/biome check",
+    "lint:write": "npx @biomejs/biome check --write"
+  },
   "dependencies": {
     "@angular/core": "^18.1.1",
     "convert-units": "^2.3.4",
