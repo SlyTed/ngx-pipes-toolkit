@@ -13,7 +13,6 @@ export default defineConfig(({ mode }) => {
       setupFiles: ['src/test-setup.ts'],
       include: ['**/*.spec.ts'],
       reporters: ['default'],
-      watch: true,
       coverage: {
         provider: 'v8',
         reporter: ['html'],

@@ -4,12 +4,19 @@
   "author": "Perros Ted",
   "version": "0.0.0",
   "license": "MIT",
-  "keywords": ["ng", "ngx", "angular", "pipes"],
+  "keywords": [
+    "ng",
+    "ngx",
+    "angular",
+    "pipes"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/SlyTed/ngx-pipes-toolkit"
   },
   "scripts": {
+    "test": "vitest",
+    "test:coverage": "vitest --coverage.enabled=true",
     "lint": "npx @biomejs/biome check",
     "lint:write": "npx @biomejs/biome check --write"
   },
@@ -21,11 +28,13 @@
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.6.2",
+    "@analogjs/vitest-angular": "^1.6.2",
+    "@angular/platform-browser-dynamic": "^18.1.1",
     "@biomejs/biome": "1.8.3",
     "@types/convert-units": "^2.3.9",
     "@types/lodash": "^4.17.7",
-    "@vitest/coverage-v8": "^2.0.3",
+    "@vitest/coverage-v8": "^1.6.0",
     "typescript": "^5.5.3",
-    "vitest": "^2.0.3"
+    "vitest": "^1.6.0"
   }
 }
