@@ -1,35 +1,37 @@
 import { Injectable, Pipe, PipeTransform } from '@angular/core';
 
-import { meanBy } from 'lodash';
+import { minBy } from 'lodash';
 
 /**
- * Pipe that calculates the mean of an array of objects
+ * Pipe that returns the item with the smallest value of an array of objects
  * based on one of their numeric property.
  * 
- * The name is `meanBy`.
+ * The name is `minBy`.
  */
 @Pipe({
   standalone: true,
   pure: true,
-  name: 'meanBy',
+  name: 'minBy',
 })
 @Injectable()
-export class MeanByPipe implements PipeTransform {
+export class MinByPipe implements PipeTransform {
   /**
-   * Calculates the mean of an array of objects
+   * Returns the item with the smallest value of an array of objects
    * based on one of their numeric property.
    * 
    * @param value - The array of objects to iterate over.
-   * @param property - The numeric property to calculate the mean on.
+   * @param property - The numeric property to calculate the minimum on.
    * @template T - The type of the objects.
    * @template K - The name of the object property.
-   * @returns The mean, or `null` if the array is `null`, `undefined` or empty.
+   * @returns
+   *   The item with the smallest value, or `null`
+   *   if the array is `null`, `undefined` or empty.
    */
   public transform<T extends object, K extends keyof T>(
     value: T[] | null | undefined,
     property: K,
-  ): number | null {
+  ): T | null {
     if (!value?.length) return null;
-    return meanBy(value, property);
+    return minBy(value, property);
   }
 }
