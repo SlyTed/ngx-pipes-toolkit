@@ -128,6 +128,14 @@ Calculates the mean of an array of objects based on one of their numeric propert
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "35" -->
 ```
 
+#### Sum by
+
+Calculates the sum of an array of objects based on one of their numeric property
+```html
+<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "50" -->
+<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "70" -->
+```
+
 #### Min by
 
 Returns the item with the smallest value of an array of object based on one of their numeric property
