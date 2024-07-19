@@ -1,1 +1,1 @@
-export * from './mean/mean.pipe';
+export * from './mean-by/mean-by.pipe';

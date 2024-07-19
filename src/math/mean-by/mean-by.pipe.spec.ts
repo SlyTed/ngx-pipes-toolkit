@@ -1,10 +1,10 @@
-import { MeanPipe } from './mean.pipe';
+import { MeanByPipe } from './mean-by.pipe';
 
-describe('Mean', () => {
-  let pipe: MeanPipe;
+describe('Mean by', () => {
+  let pipe: MeanByPipe;
 
   beforeEach(() => {
-    pipe = new MeanPipe();
+    pipe = new MeanByPipe();
   });
 
   test('Should return null if nil value', () => {
