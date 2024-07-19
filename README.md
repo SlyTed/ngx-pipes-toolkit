@@ -96,6 +96,19 @@ export class MyComponent {
 
 ## Content
 
+### Array
+
+#### Enumerate
+
+Allows to use `*ngFor` directive or `@for` control flow block like a classic `for` loop (sometimes we just want to render something in the template an certain amount of times, independently from a collection of objets)
+
+```html
+@for (index of $loadingCount() | enumerate; track index) {
+  <!-- Display skeletons while loading... -->
+}
+<ngx-skeleton *ngFor="let index of $loadingCount() | enumerate" />
+```
+
 ### Math
 
 #### Convert
