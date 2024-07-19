@@ -1,1 +1,1 @@
-# ng-pipes-toolkit
+# ngx-pipes-toolkit

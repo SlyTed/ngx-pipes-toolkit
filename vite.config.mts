@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     plugins: [angular()],
     test: {
       globals: true,
-      environment: 'jsdom',
+      environment: 'node',
       setupFiles: ['src/test-setup.ts'],
       include: ['**/*.spec.ts'],
       reporters: ['default'],
@@ -18,12 +18,9 @@ export default defineConfig(({ mode }) => {
       coverage: {
         provider: 'v8',
         reporter: ['html'],
-        enabled: true,
+        enabled: false,
         reportOnFailure: true,
       },
-    },
-    define: {
-      'import.meta.vitest': mode !== 'production',
     },
   };
 });

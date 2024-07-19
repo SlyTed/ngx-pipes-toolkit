@@ -2,12 +2,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc/spec",
-    "target": "ES2023",
+    "target": "es2016",
     "types": [
       "vitest/globals",
       "node"
     ]
   },
   "files": ["src/test-setup.ts"],
-  "include": ["src/**/*.test.ts"]
+  "include": ["src/**/*.spec.ts"]
 }
