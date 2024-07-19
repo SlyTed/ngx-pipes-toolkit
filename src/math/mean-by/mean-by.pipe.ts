@@ -1,11 +1,11 @@
-import { Injectable, Pipe, PipeTransform } from '@angular/core';
+import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
 import { meanBy } from 'lodash';
 
 /**
  * Pipe that calculates the mean of an array of objects
  * based on one of their numeric property.
- * 
+ *
  * The name is `meanBy`.
  */
 @Pipe({
@@ -18,7 +18,7 @@ export class MeanByPipe implements PipeTransform {
   /**
    * Calculates the mean of an array of objects
    * based on one of their numeric property.
-   * 
+   *
    * @param value - The array of objects to iterate over.
    * @param property - The numeric property to calculate the mean on.
    * @template T - The type of the objects.

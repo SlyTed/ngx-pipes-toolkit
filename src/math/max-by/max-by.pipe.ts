@@ -1,11 +1,11 @@
-import { Injectable, Pipe, PipeTransform } from '@angular/core';
+import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
 import { maxBy } from 'lodash';
 
 /**
  * Pipe that returns the item with the largest value of an array of objects
  * based on one of their numeric property.
- * 
+ *
  * The name is `maxBy`.
  */
 @Pipe({
@@ -18,7 +18,7 @@ export class MaxByPipe implements PipeTransform {
   /**
    * Returns the item with the largest value of an array of objects
    * based on one of their numeric property.
-   * 
+   *
    * @param value - The array of objects to iterate over.
    * @param property - The numeric property to calculate the maximum on.
    * @template T - The type of the objects.

@@ -3,10 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc/spec",
     "target": "es2016",
-    "types": [
-      "vitest/globals",
-      "node"
-    ]
+    "types": ["vitest/globals", "node"]
   },
   "files": ["src/test-setup.ts"],
   "include": ["src/**/*.spec.ts"]

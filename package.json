@@ -4,12 +4,7 @@
   "author": "Perros Ted",
   "version": "0.0.0",
   "license": "MIT",
-  "keywords": [
-    "ng",
-    "ngx",
-    "angular",
-    "pipes"
-  ],
+  "keywords": ["ng", "ngx", "angular", "pipes"],
   "repository": {
     "type": "git",
     "url": "https://github.com/SlyTed/ngx-pipes-toolkit"
@@ -23,6 +18,7 @@
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.6.2",
+    "@biomejs/biome": "1.8.3",
     "@types/convert-units": "^2.3.9",
     "@types/lodash": "^4.17.7",
     "@vitest/coverage-v8": "^2.0.3",
