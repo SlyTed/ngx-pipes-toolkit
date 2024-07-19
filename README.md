@@ -122,10 +122,17 @@ Converts a value with its current unit to the final unit
 
 #### Mean by
 
-Calculates the mean of an array of objects based on one of their property
+Calculates the mean of an array of objects based on one of their numeric property
 ```html
 <p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "25" -->
 <p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "35" -->
+```
+
+#### Min by
+Returns the item with the smallest value of an array of object based on one of their numeric property
+```html
+<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Alice', age: 20 }" -->
+<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect 1', price: 30 }" -->
 ```
 
 ## Contributing
