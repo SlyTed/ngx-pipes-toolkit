@@ -128,36 +128,76 @@ Converts a value with its current unit to the final unit
 
 Calculates the mean of an array of objects based on one of their numeric property
 
+```typescript
+const users = [
+  { name: 'Alice', age: 20 },
+  { name: 'Bob', age: 30 },
+]
+const games = [
+  { name: 'Mass Effect 1', price: 30 }
+  { name: 'Mass Effect Andromeda', price: 40 }
+]
+```
 ```html
-<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "25" -->
-<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "35" -->
+<p>{{ users | meanBy:'age' }}</p> <!-- Output: "25" -->
+<p>{{ games | meanBy:'price' }}</p> <!-- Output: "35" -->
 ```
 
 #### Sum by
 
 Calculates the sum of an array of objects based on one of their numeric property
 
+```typescript
+const users = [
+  { name: 'Alice', age: 20 },
+  { name: 'Bob', age: 30 },
+]
+const games = [
+  { name: 'Mass Effect 1', price: 30 }
+  { name: 'Mass Effect Andromeda', price: 40 }
+]
+```
 ```html
-<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | meanBy:'age' }}</p> <!-- Output: "50" -->
-<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | meanBy:'price' }}</p> <!-- Output: "70" -->
+<p>{{ users | sumBy:'age' }}</p> <!-- Output: "50" -->
+<p>{{ games | sumBy:'price' }}</p> <!-- Output: "70" -->
 ```
 
 #### Min by
 
 Returns the item with the smallest value of an array of object based on one of their numeric property
 
+```typescript
+const users = [
+  { name: 'Alice', age: 20 },
+  { name: 'Bob', age: 30 },
+]
+const games = [
+  { name: 'Mass Effect 1', price: 30 }
+  { name: 'Mass Effect Andromeda', price: 40 }
+]
+```
 ```html
-<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Alice', age: 20 }" -->
-<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect 1', price: 30 }" -->
+<p>{{ users | minBy:'age' }}</p> <!-- Output: "{ name: 'Alice', age: 20 }" -->
+<p>{{ games | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect 1', price: 30 }" -->
 ```
 
 #### Max by
 
 Returns the item with the largest value of an array of object based on one of their numeric property
 
+```typescript
+const users = [
+  { name: 'Alice', age: 20 },
+  { name: 'Bob', age: 30 },
+]
+const games = [
+  { name: 'Mass Effect 1', price: 30 }
+  { name: 'Mass Effect Andromeda', price: 40 }
+]
+```
 ```html
-<p>{{ [{ name: 'Alice', age: 20 }, { name: 'Bob', age: 30 }] | minBy:'age' }}</p> <!-- Output: "{ name: 'Bob', age: 30 }" -->
-<p>{{ [{ name: 'Mass Effect 1', price: 30 }, { name: 'Mass Effect Andromeda', price: 40 }] | minBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect Andromeda', price: 40 }" -->
+<p>{{ users | maxBy:'age' }}</p> <!-- Output: "{ name: 'Bob', age: 30 }" -->
+<p>{{ games | maxBy:'price' }}</p> <!-- Output: "{ name: 'Mass Effect Andromeda', price: 40 }" -->
 ```
 
 ## Contributing
