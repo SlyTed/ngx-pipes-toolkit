@@ -98,6 +98,15 @@ export class MyComponent {
 
 ### Math
 
+#### Convert
+
+Converts a value with its current unit to the final unit
+
+```html
+<p>{{ 1000 | convert:'m':'km' }}</p> <!-- Output: "1" -->
+<p>{{ 32 | convert:'F':'C' }}</p> <!-- Output: "0" -->
+```
+
 #### Mean
 
 Calculates the mean of an array of numbers
