@@ -18,8 +18,10 @@
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.6.2",
     "@angular/core": "^18.1.1",
+    "@types/convert-units": "^2.3.9",
     "@types/lodash": "^4.17.7",
     "@vitest/coverage-v8": "^2.0.3",
+    "convert-units": "^2.3.4",
     "lodash": "^4.17.21",
     "rxjs": "^7.8.1",
     "typescript": "^5.5.3",
