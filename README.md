@@ -208,7 +208,7 @@ const games = [
 
 - Any contribution is appreciated
 - If you are planning to add a new pipe (or any new other feature) or make a fix, please open an issue before
-- Follow the [Angular commit message format](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+- Follow the [conventional commit message format](https://www.conventionalcommits.org/en/v1.0.0/)
 
 1. Clone the project
 
