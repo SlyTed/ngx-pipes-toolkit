@@ -1,4 +1,23 @@
-# ngx-pipes-toolkit
+<a href="https://www.npmjs.com/package/ngx-pipes-toolkit">
+  <img src="https://img.shields.io/npm/v/ngx-pipes-toolkit.svg?style=for-the-badge" alt="NPM package">
+</a>
+<a href="http://packagequality.com/#?package=ngx-pipes-toolkit">
+  <img src="https://npm.packagequality.com/shield/ngx-pipes-toolkit.svg?style=for-the-badge" alt="Package quality">
+</a>
+<a href="https://coveralls.io/github/SlyTed/ngx-pipes-toolkit?branch=master">
+  <img src="https://img.shields.io/coveralls/SlyTed/ngx-pipes-toolkit.svg?style=for-the-badge" alt="Coveralls">
+</a>
+<a href="https://www.npmjs.com/package/ngx-pipes-toolkit">
+  <img src="https://img.shields.io/npm/dm/ngx-pipes-toolkit.svg?style=for-the-badge" alt="NPM monthly downloads">
+</a>
+<a href="https://www.npmjs.com/package/ngx-pipes-toolkit">
+  <img src="https://img.shields.io/npm/dt/ngx-pipes-toolkit?style=for-the-badge" alt="NPM total downloads">
+</a>
+<a href="https://github.com/SlyTed/ngx-pipes-toolkit/blob/master/LICENSE">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="MIT licensed">
+</a>
+
+# NGX Pipes Toolkit
 
 ## Table of contents
 
