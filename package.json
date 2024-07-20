@@ -2,7 +2,7 @@
   "name": "ngx-pipes-toolkit",
   "description": "Useful Angular pipes",
   "author": "Perros Ted",
-  "version": "0.1.0",
+  "version": "0.1.0-patch",
   "license": "MIT",
   "keywords": ["ng", "ngx", "angular", "pipes"],
   "repository": {
@@ -15,7 +15,6 @@
     "test:coverage": "vitest --watch=false --coverage.enabled=true",
     "lint": "npx @biomejs/biome check",
     "lint:write": "npx @biomejs/biome check --write",
-    "prepare": "npm run test:coverage && npm run lint:write",
     "publish": "npm run build && cd ./dist && npm publish --access=public"
   },
   "peerDependencies": {

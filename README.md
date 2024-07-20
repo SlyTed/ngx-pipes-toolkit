@@ -4,7 +4,7 @@
 <a href="http://packagequality.com/#?package=ngx-pipes-toolkit">
   <img src="https://npm.packagequality.com/shield/ngx-pipes-toolkit.svg?style=for-the-badge" alt="Package quality">
 </a>
-<a href="https://coveralls.io/github/SlyTed/ngx-pipes-toolkit?branch=master">
+<a href="https://coveralls.io/github/SlyTed/ngx-pipes-toolkit?branch=main">
   <img src="https://img.shields.io/coveralls/SlyTed/ngx-pipes-toolkit.svg?style=for-the-badge" alt="Coveralls">
 </a>
 <a href="https://www.npmjs.com/package/ngx-pipes-toolkit">
@@ -13,7 +13,7 @@
 <a href="https://www.npmjs.com/package/ngx-pipes-toolkit">
   <img src="https://img.shields.io/npm/dt/ngx-pipes-toolkit?style=for-the-badge" alt="NPM total downloads">
 </a>
-<a href="https://github.com/SlyTed/ngx-pipes-toolkit/blob/master/LICENSE">
+<a href="https://github.com/SlyTed/ngx-pipes-toolkit/blob/main/LICENSE">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="MIT licensed">
 </a>
 
@@ -28,11 +28,11 @@
   - [Array](#array)
     - [Enumerate](#enumerate)
   - [Math](#math)
-    - [convert](#convert)
-    - [meanBy](#mean-by)
-    - [sumBy](#sum-by)
-    - [minBy](#min-by)
-    - [maxBy](#max-by)
+    - [Convert](#convert)
+    - [MeanBy](#mean-by)
+    - [SumBy](#sum-by)
+    - [MinBy](#min-by)
+    - [MaxBy](#max-by)
 - [Contributing](#contributing)
 
 ## Motivation
