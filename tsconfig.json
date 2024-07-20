@@ -27,7 +27,7 @@
       "path": "./tsconfig.spec.json"
     }
   ],
-  "exclude": ["vite.config.mts", "src/test-setup.ts", "src/**/*.spec.ts"],
+  "exclude": ["vite.config.mts", "src/test-setup.ts"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

@@ -1,5 +1,8 @@
 import { MeanByPipe } from './mean-by.pipe';
 
+import { TEST_DATA } from 'test/test.data';
+import type { TestModel } from 'test/test.model';
+
 describe('Mean by', () => {
   let pipe: MeanByPipe;
 
@@ -8,18 +11,27 @@ describe('Mean by', () => {
   });
 
   test('Should return null if nil value', () => {
-    expect(pipe.transform(undefined)).toEqual(null);
-    expect(pipe.transform(null)).toEqual(null);
+    expect(
+      pipe.transform(undefined as TestModel[] | undefined, 'numberOnly'),
+    ).toEqual(null);
+    expect(pipe.transform(null as TestModel[] | null, 'numberOnly')).toEqual(
+      null,
+    );
   });
 
   test('Should return null if empty array', () => {
-    expect(pipe.transform([])).toEqual(null);
+    expect(pipe.transform([] as TestModel[], 'numberOnly')).toEqual(null);
   });
 
-  test('Should return correct mean if non-nil value and non-empty array', () => {
-    expect(pipe.transform([10])).toEqual(10);
-    expect(pipe.transform([10, 10])).toEqual(10);
-    expect(pipe.transform([1, 2, 3, 4, 5])).toEqual(3);
-    expect(pipe.transform([-10, 0, 10])).toEqual(0);
+  test('Should return null if non-number property', () => {
+    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(null);
+    expect(pipe.transform(TEST_DATA, 'nestedObject')).toEqual(null);
+    expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(null);
+  });
+
+  test('Should return correct mean if non-empty array and number property', () => {
+    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(2);
+    expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(1 / 3);
+    expect(pipe.transform(TEST_DATA, 'nullableNumber')).toEqual(1);
   });
 });

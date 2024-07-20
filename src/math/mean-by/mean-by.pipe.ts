@@ -23,13 +23,16 @@ export class MeanByPipe implements PipeTransform {
    * @param property - The numeric property to calculate the mean on.
    * @template T - The type of the objects.
    * @template K - The name of the object property.
-   * @returns The mean, or `null` if the array is `null`, `undefined` or empty.
+   * @returns
+   *   The mean, or `null` if the array is `null`, `undefined`, empty
+   *   or the property is not of `number` type.
    */
   public transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): number | null {
     if (!value?.length) return null;
-    return meanBy(value, property);
+    const mean = meanBy(value, property);
+    return Number.isNaN(mean) ? null : mean;
   }
 }
