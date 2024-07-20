@@ -81,6 +81,8 @@ $ npm install ngx-pipes-toolkit --save
 
 ## Usage
 
+All pipes in **ngx-pipes-toolkit** are implemented as standalone pipes. There are no Angular modules that wrap the pipes. Therefore, you can directly use them in your components or templates by importing them where needed.
+
 - In templates:
 
 ```html
