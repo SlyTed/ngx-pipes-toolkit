@@ -4,7 +4,7 @@
 
 - [Motivation](#motivation)
 - [Installation](#installation)
-- [Contributing](#contributing)
+- [Usage](#usage)
 - [Content](#content)
   - [Array](#array)
     - [Enumerate](#enumerate)
@@ -14,6 +14,7 @@
     - [sumBy](#sum-by)
     - [minBy](#min-by)
     - [maxBy](#max-by)
+- [Contributing](#contributing)
 
 ## Motivation
 
@@ -68,7 +69,7 @@ export class DashboardComponent {
 }
 ```
 
-Moreover, the aim of **ngx-pipes-toolkit** is **not** to replace other libraries, but to complete them. Indeed, there is no duplicate pipes with the other main Angular pipes library: [NGX Pipes](https://www.npmjs.com/package/ngx-pipes).
+Moreover, the aim of **ngx-pipes-toolkit** is **not** to replace other libraries, but to complement them. That's why there are no duplicate pipes with the other main Angular pipes library: [NGX Pipes](https://www.npmjs.com/package/ngx-pipes).
 
 ## Installation
 
@@ -107,7 +108,7 @@ export class MyComponent {
 
 #### Enumerate
 
-Allows to use `*ngFor` directive or `@for` control flow block like a classic `for` loop (sometimes we just want to render something in the template an certain amount of times, independently from a collection of objets)
+Allows to use `*ngFor` directive or `@for` control flow block like a classic `for` loop (sometimes we just want to render something in the template a certain number of times, independently from a collection of objets)
 
 ```html
 @for (index of $loadingCount() | enumerate; track index) {
@@ -205,4 +206,35 @@ const games = [
 
 ## Contributing
 
-TODO
+- Any contribution is appreciated
+- If you are planning to add a new pipe (or any new other feature) or make a fix, please open an issue before
+- Follow the [Angular commit message format](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
+
+1. Clone the project
+
+```bash
+$ git clone https://github.com/SlyTed/ngx-pipes-toolkit.git
+```
+
+2. Install the dependencies
+
+```bash
+$ npm install
+```
+
+3. Make your changes in a new branch
+
+```bash
+$ git checkout -b <my-branch>
+```
+
+4. Add appropriate tests (cover all cases) and make sure everything is running properly (don't forget to lint)
+
+```bash
+$ npm run test:coverage
+$ npm run lint
+```
+
+5. Push your branch
+
+6. Make a pull request
