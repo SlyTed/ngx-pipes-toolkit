@@ -7,6 +7,7 @@ export const TEST_DATA: TestModel[] = [
     nullableNumber: 1,
     numberAndString: 1,
     unknown: 1,
+    nil: null,
     nestedObject: { content: '' },
   },
   {
@@ -15,6 +16,7 @@ export const TEST_DATA: TestModel[] = [
     nullableNumber: 2,
     numberAndString: '2',
     unknown: undefined,
+    nil: undefined,
     nestedObject: { content: undefined },
   },
   {
@@ -22,6 +24,7 @@ export const TEST_DATA: TestModel[] = [
     nullableNumber: null,
     numberAndString: 'any',
     unknown: {},
+    nil: null,
     nestedObject: { content: {} },
   },
 ];

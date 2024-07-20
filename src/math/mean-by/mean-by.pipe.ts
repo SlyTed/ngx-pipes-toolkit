@@ -25,14 +25,25 @@ export class MeanByPipe implements PipeTransform {
    * @template K - The name of the object property.
    * @returns
    *   The mean, or `null` if the array is `null`, `undefined`, empty
-   *   or the property is not of `number` type.
+   *   or all property values are not of `number` type.
+   *
+   * **WARNING** - The property values are ignored
+   * if they are not of `number` type.
+   * @example
+   * ```html
+   * <p>{{ [{ age: 10 }, { age: null }, { age: 30 }}] | meanBy:'age' }}</p>
+   * <!-- Output: "20" (10 + 30 / 2) -->
+   * ```
    */
   public transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): number | null {
     if (!value?.length) return null;
-    const mean = meanBy(value, property);
+    const mean = meanBy(
+      value.filter((item) => typeof item[property] === 'number'),
+      property,
+    );
     return Number.isNaN(mean) ? null : mean;
   }
 }

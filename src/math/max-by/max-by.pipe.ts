@@ -25,13 +25,27 @@ export class MaxByPipe implements PipeTransform {
    * @template K - The name of the object property.
    * @returns
    *   The item with the largest value, or `null`
-   *   if the array is `null`, `undefined` or empty.
+   *   if the array is `null`, `undefined`, empty
+   *   or all property values are not of `number` type.
+   *
+   * **WARNING** - The property values are ignored
+   * if they are not of `number` type.
+   * @example
+   * ```html
+   * <p>{{ [{ age: 10 }, { age: null }, { age: 30 }}] | maxBy:'age' }}</p>
+   * <!-- Output: "{ age: 30 }" -->
+   * ```
    */
   public transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): T | null {
     if (!value?.length) return null;
-    return maxBy(value, property) ?? null;
+    return (
+      maxBy(
+        value.filter((item) => typeof item[property] === 'number'),
+        property,
+      ) ?? null
+    );
   }
 }

@@ -8,5 +8,6 @@ export type TestModel = {
   nullableNumber: number | null;
   numberAndString: number | string;
   unknown: unknown;
+  nil: null | undefined;
   nestedObject: TestNestedModel;
 };

@@ -23,15 +23,16 @@ describe('Mean by', () => {
     expect(pipe.transform([] as TestModel[], 'numberOnly')).toEqual(null);
   });
 
-  test('Should return null if non-number property', () => {
-    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(null);
+  test('Should return null if non-empty array and non-number property', () => {
+    expect(pipe.transform(TEST_DATA, 'nil')).toEqual(null);
     expect(pipe.transform(TEST_DATA, 'nestedObject')).toEqual(null);
-    expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(null);
   });
 
   test('Should return correct mean if non-empty array and number property', () => {
     expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(2);
-    expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(1 / 3);
-    expect(pipe.transform(TEST_DATA, 'nullableNumber')).toEqual(1);
+    expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(1);
+    expect(pipe.transform(TEST_DATA, 'nullableNumber')).toEqual(1.5);
+    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(1);
+    expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(1);
   });
 });
