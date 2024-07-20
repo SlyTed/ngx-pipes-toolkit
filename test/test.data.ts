@@ -2,6 +2,7 @@ import type { TestModel } from './test.model';
 
 export const TEST_DATA: TestModel[] = [
   {
+    sameNumber: 0,
     numberOnly: 1,
     optionalNumber: 1,
     nullableNumber: 1,
@@ -11,6 +12,7 @@ export const TEST_DATA: TestModel[] = [
     nestedObject: { content: '' },
   },
   {
+    sameNumber: 0,
     numberOnly: 2,
     optionalNumber: undefined,
     nullableNumber: 2,
@@ -20,6 +22,7 @@ export const TEST_DATA: TestModel[] = [
     nestedObject: { content: undefined },
   },
   {
+    sameNumber: 0,
     numberOnly: 3,
     nullableNumber: null,
     numberAndString: 'any',

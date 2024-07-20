@@ -28,6 +28,14 @@ export class MaxByPipe implements PipeTransform {
    *   if the array is `null`, `undefined`, empty
    *   or all property values are not of `number` type.
    *
+   * **WARNING** - If there are multiple items with the same property value,
+   * the first item is returned.
+   * @example
+   * ```html
+   * <p>{{ [{ id: '1', age: 10 }, { id: '2', age: 10 }}] | maxBy:'age' }}</p>
+   * <!-- Output: "{ id: '1', age: 10 }" -->
+   * ```
+   *
    * **WARNING** - The property values are ignored
    * if they are not of `number` type.
    * @example

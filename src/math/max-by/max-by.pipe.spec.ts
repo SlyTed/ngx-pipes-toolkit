@@ -28,7 +28,8 @@ describe('Max by', () => {
     expect(pipe.transform(TEST_DATA, 'nestedObject')).toEqual(null);
   });
 
-  test('Should return correct item if non-empty array and number property', () => {
+  test('Should return correct item with largest property value if non-empty array and number property', () => {
+    expect(pipe.transform(TEST_DATA, 'sameNumber')).toEqual(TEST_DATA.at(0));
     expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(TEST_DATA.at(2));
     expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(
       TEST_DATA.at(0),

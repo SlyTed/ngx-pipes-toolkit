@@ -3,6 +3,7 @@ type TestNestedModel = {
 };
 
 export type TestModel = {
+  sameNumber: number;
   numberOnly: number;
   optionalNumber?: number;
   nullableNumber: number | null;

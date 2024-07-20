@@ -25,13 +25,35 @@ export class MinByPipe implements PipeTransform {
    * @template K - The name of the object property.
    * @returns
    *   The item with the smallest value, or `null`
-   *   if the array is `null`, `undefined` or empty.
+   *   if the array is `null`, `undefined`, empty
+   *   or all property values are not of `number` type.
+   *
+   * **WARNING** - If there are multiple items with the same property values,
+   * the first item is returned.
+   * @example
+   * ```html
+   * <p>{{ [{ id: '1', age: 10 }, { id: '2', age: 10 }}] | minBy:'age' }}</p>
+   * <!-- Output: "{ id: '1', age: 10 }" -->
+   * ```
+   *
+   * **WARNING** - The property values are ignored
+   * if they are not of `number` type.
+   * @example
+   * ```html
+   * <p>{{ [{ age: 10 }, { age: null }, { age: 30 }}] | minBy:'age' }}</p>
+   * <!-- Output: "{ age: 10 }" -->
+   * ```
    */
   public transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): T | null {
     if (!value?.length) return null;
-    return minBy(value, property) ?? null;
+    return (
+      minBy(
+        value.filter((item) => typeof item[property] === 'number'),
+        property,
+      ) ?? null
+    );
   }
 }
