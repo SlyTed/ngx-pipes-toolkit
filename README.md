@@ -31,7 +31,11 @@ export type User = {
   age: number;
 };
 
-@Component({ /* ... */ })
+@Component({
+  template: `
+    <p>Mean age: {{ $meanAge() }}
+  `,
+})
 export class DashboardComponent {
   readonly $users: Signal<User[]> = this.userApiService.fetchUsers();
 
@@ -64,8 +68,7 @@ export class DashboardComponent {
 }
 ```
 
-Moreover, the aim of **ngx-pipes-toolkit** is **not** to replace other libraries, but to complete them. Indeed, there is no duplicate pipe with the other main Angular pipes library: [NGX Pipes](https://www.npmjs.com/package/ngx-pipes).
-
+Moreover, the aim of **ngx-pipes-toolkit** is **not** to replace other libraries, but to complete them. Indeed, there is no duplicate pipes with the other main Angular pipes library: [NGX Pipes](https://www.npmjs.com/package/ngx-pipes).
 
 ## Installation
 
