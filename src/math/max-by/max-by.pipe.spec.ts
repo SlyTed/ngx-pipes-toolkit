@@ -6,15 +6,6 @@ import type { TestModel } from 'test/test.model';
 describe('MATH - Max by', () => {
   let pipe: MaxByPipe = new MaxByPipe();
 
-  beforeAll(() => {
-    vi.useFakeTimers();
-    vi.setSystemTime(new Date('2000-01-01T00:00:00Z'));
-  });
-
-  afterAll(() => {
-    vi.useRealTimers();
-  });
-
   beforeEach(() => {
     pipe = new MaxByPipe();
   });

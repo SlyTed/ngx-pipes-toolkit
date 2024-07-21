@@ -2,15 +2,6 @@ import { castArrayProperty, castToNumber } from './cast.helper';
 
 describe('HELPERS - Cast', () => {
   describe('castArrayProperty()', () => {
-    beforeAll(() => {
-      vi.useFakeTimers();
-      vi.setSystemTime(new Date('2000-01-01T00:00:00Z'));
-    });
-
-    afterAll(() => {
-      vi.useRealTimers();
-    });
-
     test('Should return empty array if empty array provided', () => {
       const data: TestModel<number>[] = [];
       expect(castArrayProperty([] as TestModel<number>[], 'property')).toEqual(
@@ -50,7 +41,7 @@ describe('HELPERS - Cast', () => {
 
     test('Should return array with casted strings if strings contain dates', () => {
       const data: TestModel<string>[] = [
-        { property: '2000/01/01' },
+        { property: '2000/01/01 00:00:00 GMT+0100' },
         { property: '2000-01-01T00:00:00.000+01:00' },
       ];
       expect(castArrayProperty(data, 'property')).toEqual([
@@ -79,7 +70,9 @@ describe('HELPERS - Cast', () => {
     });
 
     test('Should return number if string contains date', () => {
-      expect(castToNumber('2000/01/01')).toEqual(946_681_200_000);
+      expect(castToNumber('2000/01/01 00:00:00 GMT+0100')).toEqual(
+        946_681_200_000,
+      );
       expect(castToNumber('2000-01-01T00:00:00.000+01:00')).toEqual(
         946_681_200_000,
       );

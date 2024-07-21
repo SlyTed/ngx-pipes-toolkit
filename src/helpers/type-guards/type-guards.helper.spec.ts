@@ -27,12 +27,16 @@ describe('HELPERS - Type guards', () => {
 
     test('Should return true if string', () => {
       expect(isNumberOrStringOrDate('1')).toEqual(true);
-      expect(isNumberOrStringOrDate('2000/01/01')).toEqual(true);
+      expect(isNumberOrStringOrDate('2000/01/01 00:00:00 GMT+0100')).toEqual(
+        true,
+      );
       expect(isNumberOrStringOrDate('any')).toEqual(true);
     });
 
     test('Should return true if date', () => {
-      expect(isNumberOrStringOrDate(new Date('2000/01/01'))).toEqual(true);
+      expect(
+        isNumberOrStringOrDate(new Date('2000/01/01 00:00:00 GMT+0100')),
+      ).toEqual(true);
       expect(isNumberOrStringOrDate(new Date('invalid'))).toEqual(true);
     });
   });
