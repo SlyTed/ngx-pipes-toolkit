@@ -4,7 +4,12 @@
   "author": "Perros Ted",
   "version": "0.1.2",
   "license": "MIT",
-  "keywords": ["ng", "ngx", "angular", "pipes"],
+  "keywords": [
+    "ng",
+    "ngx",
+    "angular",
+    "pipes"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/SlyTed/ngx-pipes-toolkit"

@@ -1,7 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { max } from 'lodash';
-import { castArrayProperty } from 'src/helpers/cast/cast.helper';
+import { castArrayProperty, castToNumber } from 'src/helpers/cast/cast.helper';
 
 /**
  * Pipe that returns the item with the largest value of an array of objects
@@ -52,7 +51,9 @@ export class MaxByPipe implements PipeTransform {
     if (!value?.length) return null;
     const numbers = castArrayProperty(value, property);
     if (!numbers.length) return null;
-    const result = max(numbers);
-    return value.find((item) => item[property] === result) ?? null;
+    const result = Math.max(...numbers);
+    return value.find((item) => {
+      return castToNumber(item[property] as number | string | Date) === result;
+    }) ?? null;
   }
 }

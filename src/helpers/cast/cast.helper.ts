@@ -52,7 +52,7 @@ export function castToNumber(value: number | string | Date): number {
       if (!Number.isNaN(castedToNumber)) return castedToNumber;
       // Date
       const castedToDate = new Date(value);
-      if (!Number.isNaN(castedToDate)) return castedToDate.getTime();
+      if (!Number.isNaN(castedToDate.getTime())) return castedToDate.getTime();
 
       return Number.NaN;
     }
