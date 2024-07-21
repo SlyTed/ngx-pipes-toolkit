@@ -35,7 +35,7 @@ export class MeanByPipe implements PipeTransform {
    * <!-- Output: "20" (10 + 30 / 2) -->
    * ```
    */
-  public transform<T extends object, K extends keyof T & string>(
+  transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): number | null {

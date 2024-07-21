@@ -35,7 +35,7 @@ export class SumByPipe implements PipeTransform {
    * <!-- Output: "40" -->
    * ```
    */
-  public transform<T extends object, K extends keyof T & string>(
+  transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): number | null {

@@ -47,7 +47,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Angle,
     finalUnit: Angle,
@@ -62,7 +62,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: ApparentPower,
     finalUnit: ApparentPower,
@@ -77,7 +77,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Area,
     finalUnit: Area,
@@ -92,7 +92,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Current,
     finalUnit: Current,
@@ -107,7 +107,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Distance,
     finalUnit: Distance,
@@ -122,7 +122,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Ditgital,
     finalUnit: Ditgital,
@@ -137,7 +137,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Energy,
     finalUnit: Energy,
@@ -152,7 +152,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Frequency,
     finalUnit: Frequency,
@@ -167,7 +167,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Illuminance,
     finalUnit: Illuminance,
@@ -182,7 +182,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Mass,
     finalUnit: Mass,
@@ -197,7 +197,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Pace,
     finalUnit: Pace,
@@ -212,7 +212,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: PartsPer,
     finalUnit: PartsPer,
@@ -227,7 +227,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Power,
     finalUnit: Power,
@@ -242,7 +242,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Pressure,
     finalUnit: Pressure,
@@ -257,7 +257,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: ReactiveEnergy,
     finalUnit: ReactiveEnergy,
@@ -272,7 +272,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: ReactivePower,
     finalUnit: ReactivePower,
@@ -287,7 +287,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Speed,
     finalUnit: Speed,
@@ -302,7 +302,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Temperature,
     finalUnit: Temperature,
@@ -317,7 +317,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Time,
     finalUnit: Time,
@@ -332,7 +332,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Voltage,
     finalUnit: Voltage,
@@ -347,7 +347,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Volume,
     finalUnit: Volume,
@@ -362,7 +362,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: VolumeFlowRate,
     finalUnit: VolumeFlowRate,
@@ -377,7 +377,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  public transform(
+  transform(
     value: number | null | undefined,
     currentUnit: Unit,
     finalUnit: Unit,

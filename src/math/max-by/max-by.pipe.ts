@@ -44,7 +44,7 @@ export class MaxByPipe implements PipeTransform {
    * <!-- Output: "{ age: 30 }" -->
    * ```
    */
-  public transform<T extends object, K extends keyof T & string>(
+  transform<T extends object, K extends keyof T & string>(
     value: T[] | null | undefined,
     property: K,
   ): T | null {

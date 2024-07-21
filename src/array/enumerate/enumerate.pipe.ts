@@ -21,7 +21,7 @@ export class EnumeratePipe implements PipeTransform {
    * @param value - The number of iterations.
    * @returns The array.
    */
-  public transform(value: number | null | undefined): number[] {
+  transform(value: number | null | undefined): number[] {
     if (!value || value <= 0) return [];
     return range(value);
   }
