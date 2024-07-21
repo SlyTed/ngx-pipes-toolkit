@@ -11,8 +11,9 @@
   },
   "scripts": {
     "build": "ng build",
-    "test": "vitest --watch=false",
-    "test:coverage": "vitest --watch=false --coverage.enabled=true",
+    "test": "vitest",
+    "test:coverage:local": "vitest --coverage.enabled=true --coverage.reporter=html",
+    "test:coverage:ci": "vitest --coverage.enabled=true --coverage.reporter=lcov",
     "lint": "npx @biomejs/biome check",
     "lint:write": "npx @biomejs/biome check --write",
     "publish": "npm run build && cd ./dist && npm publish --access=public"

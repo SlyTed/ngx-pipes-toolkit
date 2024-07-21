@@ -13,10 +13,10 @@ export default defineConfig(({ mode }) => {
       setupFiles: ['src/test-setup.ts'],
       include: ['**/*.spec.ts'],
       reporters: ['default'],
+      watch: false,
       // NOTE: prevent Vitest timeout in GitHub Action
       pool: 'forks',
       coverage: {
-        reporter: ['lcov'],
         enabled: false,
         reportOnFailure: true,
       },
