@@ -52,8 +52,12 @@ export class MaxByPipe implements PipeTransform {
     const numbers = castArrayProperty(value, property);
     if (!numbers.length) return null;
     const result = Math.max(...numbers);
-    return value.find((item) => {
-      return castToNumber(item[property] as number | string | Date) === result;
-    }) ?? null;
+    return (
+      value.find((item) => {
+        return (
+          castToNumber(item[property] as number | string | Date) === result
+        );
+      }) ?? null
+    );
   }
 }

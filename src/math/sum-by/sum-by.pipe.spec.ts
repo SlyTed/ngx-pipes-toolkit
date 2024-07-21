@@ -34,9 +34,9 @@ describe('MATH - Sum by', () => {
     expect(pipe.transform(TEST_DATA, 'nullableNumber')).toEqual(3);
     expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(3);
     expect(pipe.transform(TEST_DATA, 'numberAndStringAndDate')).toEqual(
-      new Date('2000-01-01T00:00:00.000+01:00').getTime() + 
-      new Date('2010-01-01').getTime() +
-      new Date('2020-01-01').getTime()
+      new Date('2000-01-01T00:00:00.000+01:00').getTime() +
+        new Date('2010-01-01').getTime() +
+        new Date('2020-01-01').getTime(),
     );
     expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(1);
   });

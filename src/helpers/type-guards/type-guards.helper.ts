@@ -7,7 +7,9 @@
 export function isNumberOrStringOrDate(
   value: unknown,
 ): value is number | string | Date {
-  return typeof value === 'number'
-    || typeof value === 'string'
-    || value instanceof Date;
+  return (
+    typeof value === 'number' ||
+    typeof value === 'string' ||
+    value instanceof Date
+  );
 }

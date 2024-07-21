@@ -2,14 +2,9 @@
   "name": "ngx-pipes-toolkit",
   "description": "Complementary pipes library for Angular",
   "author": "Perros Ted",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "license": "MIT",
-  "keywords": [
-    "ng",
-    "ngx",
-    "angular",
-    "pipes"
-  ],
+  "keywords": ["ng", "ngx", "angular", "pipes"],
   "repository": {
     "type": "git",
     "url": "https://github.com/SlyTed/ngx-pipes-toolkit"

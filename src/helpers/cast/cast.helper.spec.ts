@@ -3,24 +3,22 @@ import { castArrayProperty, castToNumber } from './cast.helper';
 describe('HELPERS - Cast', () => {
   describe('castArrayProperty()', () => {
     test('Should return empty array if empty array provided', () => {
-      const data: TestModel<number>[] = []
-      expect(castArrayProperty([] as TestModel<number>[], 'property')).toEqual([]);
+      const data: TestModel<number>[] = [];
+      expect(castArrayProperty([] as TestModel<number>[], 'property')).toEqual(
+        [],
+      );
     });
-  
+
     test('Should return empty array if NaN numbers', () => {
-      const data: TestModel<number>[] = [
-        { property: Number.NaN },
-      ];
+      const data: TestModel<number>[] = [{ property: Number.NaN }];
       expect(castArrayProperty(data, 'property')).toEqual([]);
     });
-  
+
     test('Should return empty array if strings neither numbers nor dates', () => {
-      const data: TestModel<number | string>[] = [
-        { property: 'invalid' },
-      ];
+      const data: TestModel<number | string>[] = [{ property: 'invalid' }];
       expect(castArrayProperty(data, 'property')).toEqual([]);
     });
-  
+
     test('Should return empty array if invalid dates', () => {
       const data: TestModel<number | Date>[] = [
         { property: new Date('invalid') },
@@ -32,7 +30,7 @@ describe('HELPERS - Cast', () => {
       const data: TestModel<number>[] = [{ property: 1 }, { property: 2 }];
       expect(castArrayProperty(data, 'property')).toEqual([1, 2]);
     });
-  
+
     test('Should return numbers if strings contain numbers', () => {
       const data: TestModel<string>[] = [
         { property: '1' },
@@ -40,15 +38,14 @@ describe('HELPERS - Cast', () => {
       ];
       expect(castArrayProperty(data, 'property')).toEqual([1, 10e2]);
     });
-  
+
     test('Should return array with casted strings if strings contain dates', () => {
       const data: TestModel<string>[] = [
         { property: '2000/01/01' },
         { property: '2000-01-01T00:00:00.000+01:00' },
       ];
       expect(castArrayProperty(data, 'property')).toEqual([
-        946_681_200_000,
-        946_681_200_000,
+        946_681_200_000, 946_681_200_000,
       ]);
     });
   });
@@ -74,7 +71,9 @@ describe('HELPERS - Cast', () => {
 
     test('Should return number if string contains date', () => {
       expect(castToNumber('2000/01/01')).toEqual(946_681_200_000);
-      expect(castToNumber('2000-01-01T00:00:00.000+01:00')).toEqual(946_681_200_000);
+      expect(castToNumber('2000-01-01T00:00:00.000+01:00')).toEqual(
+        946_681_200_000,
+      );
     });
   });
 });
