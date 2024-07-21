@@ -2,6 +2,15 @@ import { castArrayProperty, castToNumber } from './cast.helper';
 
 describe('HELPERS - Cast', () => {
   describe('castArrayProperty()', () => {
+    beforeAll(() => {
+      vi.useFakeTimers();
+      vi.setSystemTime(new Date('2000-01-01T00:00:00Z'));
+    });
+
+    afterAll(() => {
+      vi.useRealTimers();
+    });
+
     test('Should return empty array if empty array provided', () => {
       const data: TestModel<number>[] = [];
       expect(castArrayProperty([] as TestModel<number>[], 'property')).toEqual(

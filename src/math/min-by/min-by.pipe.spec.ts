@@ -6,6 +6,15 @@ import type { TestModel } from 'test/test.model';
 describe('MATH - Min by', () => {
   let pipe: MinByPipe;
 
+  beforeAll(() => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2000-01-01T00:00:00Z'));
+  });
+
+  afterAll(() => {
+    vi.useRealTimers();
+  });
+
   beforeEach(() => {
     pipe = new MinByPipe();
   });
