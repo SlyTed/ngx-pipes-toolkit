@@ -1,5 +1,5 @@
 import { toNumber } from 'lodash';
-import { isNumberOrStringOrDate } from './type-guards.helper';
+import { isNumberOrStringOrDate } from '../type-guards/type-guards.helper';
 
 // NOTE: these functions were implemented
 // because Lodash does not fully support dates for comparisons

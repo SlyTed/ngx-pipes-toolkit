@@ -1,7 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
 import { min } from 'lodash';
-import { castArrayProperty } from 'src/helpers/cast.helper';
+import { castArrayProperty } from 'src/helpers/cast/cast.helper';
 
 /**
  * Pipe that returns the item with the smallest value of an array of objects

@@ -1,7 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
 import { max } from 'lodash';
-import { castArrayProperty } from 'src/helpers/cast.helper';
+import { castArrayProperty } from 'src/helpers/cast/cast.helper';
 
 /**
  * Pipe that returns the item with the largest value of an array of objects
