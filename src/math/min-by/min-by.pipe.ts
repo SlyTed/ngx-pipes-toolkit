@@ -1,6 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { castArrayProperty, castToNumber } from 'src/helpers/cast/cast.helper';
+import { castArrayProperty, castToNumber } from 'src/helpers';
 
 /**
  * Pipe that returns the item with the smallest value of an array of objects

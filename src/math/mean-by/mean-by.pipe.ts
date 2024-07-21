@@ -1,7 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
 import { mean } from 'lodash';
-import { castArrayProperty } from 'src/helpers/cast/cast.helper';
+import { castArrayProperty } from 'src/helpers';
 
 /**
  * Pipe that calculates the mean of an array of objects
