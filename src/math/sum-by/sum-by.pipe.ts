@@ -1,6 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import sumBy from 'lodash-es/sumBy';
+import { sumBy } from 'lodash-es';
 
 /**
  * Pipe that calculates the sum of an array of objects

@@ -1,6 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import minBy from 'lodash-es/minBy';
+import { minBy } from 'lodash-es';
 
 /**
  * Pipe that returns the item with the smallest value of an array of objects
