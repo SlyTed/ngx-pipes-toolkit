@@ -29,10 +29,15 @@ describe('MATH - Sum by', () => {
   });
 
   test('Should return correct sum if non-empty array and number property', () => {
-    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(6);
+    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(15);
     expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(1);
     expect(pipe.transform(TEST_DATA, 'nullableNumber')).toEqual(3);
-    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(1);
+    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(3);
+    expect(pipe.transform(TEST_DATA, 'numberAndStringAndDate')).toEqual(
+      new Date('2000-01-01T00:00:00.000+01:00').getTime() + 
+      new Date('2010-01-01').getTime() +
+      new Date('2020-01-01').getTime()
+    );
     expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(1);
   });
 });

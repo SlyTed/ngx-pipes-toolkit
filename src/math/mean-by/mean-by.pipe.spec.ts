@@ -10,7 +10,7 @@ describe('MATH - Mean by', () => {
     pipe = new MeanByPipe();
   });
 
-  test('Should return null if nil provided', () => {
+  test('Should return null if nil value', () => {
     expect(
       pipe.transform(undefined as TestModel[] | undefined, 'numberOnly'),
     ).toEqual(null);

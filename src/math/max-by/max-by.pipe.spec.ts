@@ -30,7 +30,7 @@ describe('MATH - Max by', () => {
 
   test('Should return correct item with largest property value if non-empty array and number property', () => {
     expect(pipe.transform(TEST_DATA, 'sameNumber')).toEqual(TEST_DATA.at(0));
-    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(TEST_DATA.at(2));
+    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(TEST_DATA.at(4));
     expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(
       TEST_DATA.at(0),
     );
@@ -38,7 +38,10 @@ describe('MATH - Max by', () => {
       TEST_DATA.at(1),
     );
     expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(
-      TEST_DATA.at(0),
+      TEST_DATA.at(1),
+    );
+    expect(pipe.transform(TEST_DATA, 'numberAndStringAndDate')).toEqual(
+      TEST_DATA.at(2),
     );
     expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(TEST_DATA.at(0));
   });

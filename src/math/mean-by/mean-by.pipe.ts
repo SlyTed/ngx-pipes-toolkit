@@ -43,7 +43,6 @@ export class MeanByPipe implements PipeTransform {
     if (!value?.length) return null;
     const numbers = castArrayProperty(value, property);
     if (!numbers.length) return null;
-    const result = mean(numbers);
-    return Number.isNaN(result) ? null : result;
+    return mean(numbers);
   }
 }

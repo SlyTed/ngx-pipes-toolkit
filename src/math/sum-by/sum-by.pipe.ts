@@ -1,6 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { sumBy } from 'lodash';
+import { sum } from 'lodash';
+import { castArrayProperty } from 'src/helpers/cast.helper';
 
 /**
  * Pipe that calculates the sum of an array of objects
@@ -40,11 +41,8 @@ export class SumByPipe implements PipeTransform {
     property: K,
   ): number | null {
     if (!value?.length) return null;
-    // NOTE: 'sumBy' returns by default 0
-    if (value.every((item) => typeof item[property] !== 'number')) return null;
-    return sumBy(
-      value.filter((item) => typeof item[property] === 'number'),
-      property,
-    );
+    const numbers = castArrayProperty(value, property);
+    if (!numbers.length) return null;
+    return sum(numbers);
   }
 }
