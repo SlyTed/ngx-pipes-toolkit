@@ -3,7 +3,7 @@ import { MinByPipe } from './min-by.pipe';
 import { TEST_DATA } from 'test/test.data';
 import type { TestModel } from 'test/test.model';
 
-describe('Min by', () => {
+describe('MATH - Min by', () => {
   let pipe: MinByPipe;
 
   beforeEach(() => {

@@ -3,7 +3,7 @@ import { MaxByPipe } from './max-by.pipe';
 import { TEST_DATA } from 'test/test.data';
 import type { TestModel } from 'test/test.model';
 
-describe('Max by', () => {
+describe('MATH - Max by', () => {
   let pipe: MaxByPipe = new MaxByPipe();
 
   beforeEach(() => {

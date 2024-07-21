@@ -3,7 +3,7 @@ import { SumByPipe } from './sum-by.pipe';
 import { TEST_DATA } from 'test/test.data';
 import type { TestModel } from 'test/test.model';
 
-describe('Sum by', () => {
+describe('MATH - Sum by', () => {
   let pipe: SumByPipe;
 
   beforeEach(() => {

@@ -3,7 +3,7 @@ import { MeanByPipe } from './mean-by.pipe';
 import { TEST_DATA } from 'test/test.data';
 import type { TestModel } from 'test/test.model';
 
-describe('Mean by', () => {
+describe('MATH - Mean by', () => {
   let pipe: MeanByPipe;
 
   beforeEach(() => {

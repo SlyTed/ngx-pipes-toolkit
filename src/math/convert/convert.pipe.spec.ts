@@ -1,6 +1,6 @@
 import { ConvertPipe } from './convert.pipe';
 
-describe('Convert', () => {
+describe('MATH - Convert', () => {
   let pipe: ConvertPipe;
 
   beforeEach(() => {
