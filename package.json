@@ -2,7 +2,7 @@
   "name": "ngx-pipes-toolkit",
   "description": "Useful Angular pipes",
   "author": "Perros Ted",
-  "version": "0.1.0-patch",
+  "version": "0.1.1",
   "license": "MIT",
   "keywords": ["ng", "ngx", "angular", "pipes"],
   "repository": {
@@ -18,11 +18,9 @@
     "publish": "npm run build && cd ./dist && npm publish --access=public"
   },
   "peerDependencies": {
-    "@angular/core": ">=14"
-  },
-  "dependencies": {
+    "@angular/core": ">=14",
     "convert-units": "^2.3.4",
-    "lodash": "^4.17.21"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@analogjs/vite-plugin-angular": "^1.6.2",
@@ -31,7 +29,7 @@
     "@angular/platform-browser-dynamic": "^18.1.1",
     "@biomejs/biome": "1.8.3",
     "@types/convert-units": "^2.3.9",
-    "@types/lodash": "^4.17.7",
+    "@types/lodash-es": "^4.17.12",
     "@vitest/coverage-v8": "^1.6.0",
     "ng-packagr": "^18.1.0",
     "typescript": "^5.5.3",
