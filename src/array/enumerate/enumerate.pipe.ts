@@ -1,6 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { range } from 'lodash';
+import range from 'lodash-es/range';
 
 /**
  * Pipe that allows to use `*ngFor` directive or `@for` control flow block

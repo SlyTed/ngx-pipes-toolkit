@@ -1,6 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { meanBy } from 'lodash';
+import meanBy from 'lodash-es/meanBy';
 
 /**
  * Pipe that calculates the mean of an array of objects
