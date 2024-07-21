@@ -1,6 +1,6 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { maxBy } from 'lodash-es';
+import { maxBy } from 'lodash';
 
 /**
  * Pipe that returns the item with the largest value of an array of objects
