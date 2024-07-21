@@ -5,7 +5,7 @@ import { castArrayProperty } from 'src/helpers';
 
 /**
  * Pipe that calculates the sum of an array of objects
- * based on one of their numeric property.
+ * based on one of their `number`, parsable `string` or `Date` property.
  *
  * The name is `sumBy`.
  */
@@ -18,18 +18,18 @@ import { castArrayProperty } from 'src/helpers';
 export class SumByPipe implements PipeTransform {
   /**
    * Calculates the sum of an array of objects
-   * based on one of their numeric property.
+   * based on one of their `number`, parsable `string` or `Date` property.
    *
    * @param value - The array of objects to iterate over.
-   * @param property - The numeric property to calculate the minimum on.
+   * @param property - The property to calculate the minimum on.
    * @template T - The type of the objects.
    * @template K - The name of the object property.
    * @returns
    *   The sum, or `null` if the array is `null`, `undefined`, empty.
-   *   or all property values are not of `number` type.
+   *   or all property values are not of a valid type.
    *
    * **WARNING** - The property values are ignored
-   * if they are not of `number` type.
+   * if they are not of a valid type.
    * @example
    * ```html
    * <p>{{ [{ price: 10 }, { price: null }, { price: 30 }}] | sumBy:'age' }}</p>

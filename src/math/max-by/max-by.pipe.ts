@@ -4,7 +4,7 @@ import { castArrayProperty, castToNumber } from 'src/helpers';
 
 /**
  * Pipe that returns the item with the largest value of an array of objects
- * based on one of their numeric property.
+ * based on one of their `number`, parsable `string` or `Date` property.
  *
  * The name is `maxBy`.
  */
@@ -17,16 +17,16 @@ import { castArrayProperty, castToNumber } from 'src/helpers';
 export class MaxByPipe implements PipeTransform {
   /**
    * Returns the item with the largest value of an array of objects
-   * based on one of their numeric property.
+   * based on one of their `number`, parsable `string` or `Date` property.
    *
    * @param value - The array of objects to iterate over.
-   * @param property - The numeric property to calculate the maximum on.
+   * @param property - The property to calculate the maximum on.
    * @template T - The type of the objects.
    * @template K - The name of the object property.
    * @returns
    *   The item with the largest value, or `null`
    *   if the array is `null`, `undefined`, empty
-   *   or all property values are not of `number` type.
+   *   or all property values are not of a valid type.
    *
    * **WARNING** - If there are multiple items with the same property value,
    * the first item is returned.
@@ -37,7 +37,7 @@ export class MaxByPipe implements PipeTransform {
    * ```
    *
    * **WARNING** - The property values are ignored
-   * if they are not of `number` type.
+   * if they are not of a valid type.
    * @example
    * ```html
    * <p>{{ [{ age: 10 }, { age: null }, { age: 30 }}] | maxBy:'age' }}</p>

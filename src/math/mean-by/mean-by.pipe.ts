@@ -5,7 +5,7 @@ import { castArrayProperty } from 'src/helpers';
 
 /**
  * Pipe that calculates the mean of an array of objects
- * based on one of their numeric property.
+ * based on one of their `number`, parsable `string` or `Date` property.
  *
  * The name is `meanBy`.
  */
@@ -18,22 +18,22 @@ import { castArrayProperty } from 'src/helpers';
 export class MeanByPipe implements PipeTransform {
   /**
    * Calculates the mean of an array of objects
-   * based on one of their numeric property.
+   * based on one of their `number`, parsable `string` or `Date` property.
    *
    * @param value - The array of objects to iterate over.
-   * @param property - The numeric property to calculate the mean on.
+   * @param property - The property to calculate the mean on.
    * @template T - The type of the objects.
    * @template K - The name of the object property.
    * @returns
    *   The mean, or `null` if the array is `null`, `undefined`, empty
-   *   or all property values are not of `number` type.
+   *   or all property values are not of a valid type.
    *
    * **WARNING** - The property values are ignored
-   * if they are not of `number` type.
+   * if they are not of a valid type.
    * @example
    * ```html
    * <p>{{ [{ age: 10 }, { age: null }, { age: 30 }}] | meanBy:'age' }}</p>
-   * <!-- Output: "20" (10 + 30 / 2) -->
+   * <!-- Output: "20" ((10 + 30) / 2) -->
    * ```
    */
   transform<T extends object, K extends keyof T & string>(

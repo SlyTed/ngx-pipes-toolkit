@@ -19,6 +19,8 @@
 
 # NGX Pipes Toolkit
 
+A complementary pipes library for Angular
+
 ## Table of contents
 
 - [Motivation](#motivation)
@@ -151,7 +153,7 @@ Converts a value with its current unit to the final unit
 
 #### Mean by
 
-Calculates the mean of an array of objects based on one of their numeric property
+Calculates the mean of an array of objects based on one of their `number`, parsable `string` or `Date` property
 
 ```typescript
 const users = [
@@ -170,7 +172,7 @@ const games = [
 
 #### Sum by
 
-Calculates the sum of an array of objects based on one of their numeric property
+Calculates the sum of an array of objects based on one of their `number`, parsable `string` or `Date` property
 
 ```typescript
 const users = [
@@ -189,7 +191,7 @@ const games = [
 
 #### Min by
 
-Returns the item with the smallest value of an array of object based on one of their numeric property
+Returns the item with the smallest value of an array of object based on one of their `number`, parsable `string` or `Date` property
 
 ```typescript
 const users = [
@@ -208,7 +210,7 @@ const games = [
 
 #### Max by
 
-Returns the item with the largest value of an array of object based on one of their numeric property
+Returns the item with the largest value of an array of object based on one of their `number`, parsable `string` or `Date` property
 
 ```typescript
 const users = [
