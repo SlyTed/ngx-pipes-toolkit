@@ -40,6 +40,9 @@ describe('MATH - Min by', () => {
     expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(
       TEST_DATA.at(0),
     );
+    expect(pipe.transform(TEST_DATA, 'numberAndStringAndDate')).toEqual(
+      TEST_DATA.at(0),
+    );
     expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(TEST_DATA.at(0));
   });
 });

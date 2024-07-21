@@ -20,7 +20,6 @@
   "peerDependencies": {
     "@angular/core": ">=14",
     "convert-units": "^2.3.4",
-    "date-fns": "^3.6.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

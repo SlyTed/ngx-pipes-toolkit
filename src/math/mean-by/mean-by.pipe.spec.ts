@@ -10,7 +10,7 @@ describe('MATH - Mean by', () => {
     pipe = new MeanByPipe();
   });
 
-  test('Should return null if nil value', () => {
+  test('Should return null if nil provided', () => {
     expect(
       pipe.transform(undefined as TestModel[] | undefined, 'numberOnly'),
     ).toEqual(null);
@@ -29,10 +29,16 @@ describe('MATH - Mean by', () => {
   });
 
   test('Should return correct mean if non-empty array and number property', () => {
-    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(2);
+    expect(pipe.transform(TEST_DATA, 'numberOnly')).toEqual(3);
     expect(pipe.transform(TEST_DATA, 'optionalNumber')).toEqual(1);
     expect(pipe.transform(TEST_DATA, 'nullableNumber')).toEqual(1.5);
-    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(1);
+    expect(pipe.transform(TEST_DATA, 'numberAndString')).toEqual(1.5);
+    expect(pipe.transform(TEST_DATA, 'numberAndStringAndDate')).toEqual(
+      (new Date('2000-01-01T00:00:00.000+01:00').getTime() + 
+      new Date('2010-01-01').getTime() +
+      new Date('2020-01-01').getTime()) /
+      3
+    );
     expect(pipe.transform(TEST_DATA, 'unknown')).toEqual(1);
   });
 });

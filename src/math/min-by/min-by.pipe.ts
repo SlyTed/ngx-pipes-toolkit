@@ -1,6 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { minBy } from 'lodash';
+import { min } from 'lodash';
+import { castArrayProperty } from 'src/helpers/cast.helper';
 
 /**
  * Pipe that returns the item with the smallest value of an array of objects
@@ -49,11 +50,9 @@ export class MinByPipe implements PipeTransform {
     property: K,
   ): T | null {
     if (!value?.length) return null;
-    return (
-      minBy(
-        value.filter((item) => typeof item[property] === 'number'),
-        property,
-      ) ?? null
-    );
+    const numbers = castArrayProperty(value, property);
+    if (!numbers.length) return null;
+    const result = min(numbers);
+    return value.find((item) => item[property] === result) ?? null;
   }
 }

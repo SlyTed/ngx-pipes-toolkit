@@ -1,6 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
-import { meanBy } from 'lodash';
+import { mean } from 'lodash';
+import { castArrayProperty } from 'src/helpers/cast.helper';
 
 /**
  * Pipe that calculates the mean of an array of objects
@@ -40,10 +41,9 @@ export class MeanByPipe implements PipeTransform {
     property: K,
   ): number | null {
     if (!value?.length) return null;
-    const mean = meanBy(
-      value.filter((item) => typeof item[property] === 'number'),
-      property,
-    );
-    return Number.isNaN(mean) ? null : mean;
+    const numbers = castArrayProperty(value, property);
+    if (!numbers.length) return null;
+    const result = mean(numbers);
+    return Number.isNaN(result) ? null : result;
   }
 }
