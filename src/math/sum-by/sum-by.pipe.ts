@@ -1,7 +1,7 @@
 import { Injectable, Pipe, type PipeTransform } from '@angular/core';
 
 import { sum } from 'lodash';
-import { castArrayProperty } from 'src/helpers';
+import { castArrayProperty } from '../../helpers';
 
 /**
  * Pipe that calculates the sum of an array of objects
