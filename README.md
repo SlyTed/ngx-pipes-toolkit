@@ -121,7 +121,7 @@ import { ConvertPipe } from 'ngx-pipes-toolkit';
 export class MyComponent {
   readonly convertPipe = inject(ConvertPipe);
 
-  readonly conversion = this.meanPipe.transform(1_000, 'm', 'km'); // Returns "1"
+  readonly conversion = this.convertPipe.transform(1_000, 'm', 'km'); // Returns "1"
 }
 ```
 
