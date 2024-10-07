@@ -20,7 +20,7 @@ export class MeanByPipe implements PipeTransform {
   transform<T extends object, K extends keyof T & string>(
     value: T[],
     property: K,
-  ): T;
+  ): number | null;
 
   /**
    * Calculates the mean of an array of objects

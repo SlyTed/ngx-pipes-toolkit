@@ -20,7 +20,7 @@ export class SumByPipe implements PipeTransform {
   transform<T extends object, K extends keyof T & string>(
     value: T[],
     property: K,
-  ): T;
+  ): number | null;
 
   /**
    * Calculates the sum of an array of objects

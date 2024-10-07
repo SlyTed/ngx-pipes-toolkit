@@ -19,7 +19,7 @@ export class MinByPipe implements PipeTransform {
   transform<T extends object, K extends keyof T & string>(
     value: T[],
     property: K,
-  ): T;
+  ): number | null;
 
   /**
    * Returns the item with the smallest value of an array of objects
