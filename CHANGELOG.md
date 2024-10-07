@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 - 2024-10-07
+
+### Changed
+
+Enhance typing of 'transform()' methods
+
 ## 0.2.1 - 2024-07-22
 
 ### Changed

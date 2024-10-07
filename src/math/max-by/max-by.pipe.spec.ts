@@ -3,7 +3,7 @@ import { MaxByPipe } from './max-by.pipe';
 import { TEST_DATA } from 'test/test.data';
 import type { TestModel } from 'test/test.model';
 
-describe('MATH - Max by', () => {
+suite('MATH - Max by', () => {
   let pipe: MaxByPipe = new MaxByPipe();
 
   beforeEach(() => {
@@ -11,16 +11,15 @@ describe('MATH - Max by', () => {
   });
 
   test('Should return null if nil value', () => {
-    expect(
-      pipe.transform(undefined as TestModel[] | undefined, 'numberOnly'),
-    ).toEqual(null);
-    expect(pipe.transform(null as TestModel[] | null, 'numberOnly')).toEqual(
-      null,
-    );
+    expect(pipe.transform(undefined, 'numberOnly')).toEqual(null);
+    expect(pipe.transform(null, 'numberOnly')).toEqual(null);
   });
 
   test('Should return null if empty array', () => {
-    expect(pipe.transform([] as TestModel[], 'numberOnly')).toEqual(null);
+    expect(pipe.transform([], 'numberOnly')).toEqual(null);
+    expect(
+      pipe.transform([] satisfies TestModel[] | null, 'numberOnly'),
+    ).toEqual(null);
   });
 
   test('Should return null if non-empty array and non-number property', () => {

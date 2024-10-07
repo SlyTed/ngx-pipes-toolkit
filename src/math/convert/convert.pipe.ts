@@ -38,6 +38,8 @@ import convert, {
 })
 @Injectable()
 export class ConvertPipe implements PipeTransform {
+  transform(value: null | undefined, currentUnit: Unit, finalUnit: Unit): null;
+
   /**
    * Converts an angle value.
    *
@@ -47,11 +49,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Angle,
-    finalUnit: Angle,
-  ): number | null;
+  transform(value: number, currentUnit: Angle, finalUnit: Angle): number;
 
   /**
    * Converts an apparent power value.
@@ -63,10 +61,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: ApparentPower,
     finalUnit: ApparentPower,
-  ): number | null;
+  ): number;
 
   /**
    * Converts an area value.
@@ -77,11 +75,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Area,
-    finalUnit: Area,
-  ): number | null;
+  transform(value: number, currentUnit: Area, finalUnit: Area): number;
 
   /**
    * Converts a current value.
@@ -92,11 +86,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Current,
-    finalUnit: Current,
-  ): number | null;
+  transform(value: number, currentUnit: Current, finalUnit: Current): number;
 
   /**
    * Converts a distance value.
@@ -107,11 +97,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Distance,
-    finalUnit: Distance,
-  ): number | null;
+  transform(value: number, currentUnit: Distance, finalUnit: Distance): number;
 
   /**
    * Converts a digital value.
@@ -122,11 +108,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Ditgital,
-    finalUnit: Ditgital,
-  ): number | null;
+  transform(value: number, currentUnit: Ditgital, finalUnit: Ditgital): number;
 
   /**
    * Converts an energy value.
@@ -137,11 +119,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Energy,
-    finalUnit: Energy,
-  ): number | null;
+  transform(value: number, currentUnit: Energy, finalUnit: Energy): number;
 
   /**
    * Converts a frequency value.
@@ -153,10 +131,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: Frequency,
     finalUnit: Frequency,
-  ): number | null;
+  ): number;
 
   /**
    * Converts an illuminance value.
@@ -168,10 +146,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: Illuminance,
     finalUnit: Illuminance,
-  ): number | null;
+  ): number;
 
   /**
    * Converts a mass value.
@@ -182,11 +160,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Mass,
-    finalUnit: Mass,
-  ): number | null;
+  transform(value: number, currentUnit: Mass, finalUnit: Mass): number;
 
   /**
    * Converts a pace value.
@@ -197,14 +171,10 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Pace,
-    finalUnit: Pace,
-  ): number | null;
+  transform(value: number, currentUnit: Pace, finalUnit: Pace): number;
 
   /**
-   * Converts a parts value.
+   * Converts a parts par value.
    *
    * @param value - The parts per value to convert.
    * @param currentUnit - The current parts per unit of the value.
@@ -212,11 +182,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: PartsPer,
-    finalUnit: PartsPer,
-  ): number | null;
+  transform(value: number, currentUnit: PartsPer, finalUnit: PartsPer): number;
 
   /**
    * Converts a power value.
@@ -227,11 +193,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Power,
-    finalUnit: Power,
-  ): number | null;
+  transform(value: number, currentUnit: Power, finalUnit: Power): number;
 
   /**
    * Converts a pressure value.
@@ -242,11 +204,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Pressure,
-    finalUnit: Pressure,
-  ): number | null;
+  transform(value: number, currentUnit: Pressure, finalUnit: Pressure): number;
 
   /**
    * Converts a reactive energy value.
@@ -258,10 +216,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: ReactiveEnergy,
     finalUnit: ReactiveEnergy,
-  ): number | null;
+  ): number;
 
   /**
    * Converts a reactive power value.
@@ -273,10 +231,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: ReactivePower,
     finalUnit: ReactivePower,
-  ): number | null;
+  ): number;
 
   /**
    * Converts a speed value.
@@ -287,11 +245,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Speed,
-    finalUnit: Speed,
-  ): number | null;
+  transform(value: number, currentUnit: Speed, finalUnit: Speed): number;
 
   /**
    * Converts a temperature value.
@@ -303,10 +257,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: Temperature,
     finalUnit: Temperature,
-  ): number | null;
+  ): number;
 
   /**
    * Converts a time value.
@@ -317,11 +271,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Time,
-    finalUnit: Time,
-  ): number | null;
+  transform(value: number, currentUnit: Time, finalUnit: Time): number;
 
   /**
    * Converts a voltage value.
@@ -332,11 +282,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Voltage,
-    finalUnit: Voltage,
-  ): number | null;
+  transform(value: number, currentUnit: Voltage, finalUnit: Voltage): number;
 
   /**
    * Converts a volume value.
@@ -347,11 +293,7 @@ export class ConvertPipe implements PipeTransform {
    * @returns
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
-  transform(
-    value: number | null | undefined,
-    currentUnit: Volume,
-    finalUnit: Volume,
-  ): number | null;
+  transform(value: number, currentUnit: Volume, finalUnit: Volume): number;
 
   /**
    * Converts a volume flow value.
@@ -363,10 +305,10 @@ export class ConvertPipe implements PipeTransform {
    *   The result of the conversion, or `null` if the provided value is `nil`.
    */
   transform(
-    value: number | null | undefined,
+    value: number,
     currentUnit: VolumeFlowRate,
     finalUnit: VolumeFlowRate,
-  ): number | null;
+  ): number;
 
   /**
    * Converts a value with its current unit to The final unit.

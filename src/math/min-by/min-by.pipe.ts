@@ -15,6 +15,12 @@ import { castArrayProperty, castToNumber } from '../../helpers';
 })
 @Injectable()
 export class MinByPipe implements PipeTransform {
+  transform(value: null | undefined, property: unknown): null;
+  transform<T extends object, K extends keyof T & string>(
+    value: T[],
+    property: K,
+  ): T;
+
   /**
    * Returns the item with the smallest value of an array of objects
    * based on one of their `number`, parsable `string` or `Date` property.

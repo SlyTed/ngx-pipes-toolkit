@@ -16,6 +16,12 @@ import { castArrayProperty } from '../../helpers';
 })
 @Injectable()
 export class SumByPipe implements PipeTransform {
+  transform(value: null | undefined, property: unknown): null;
+  transform<T extends object, K extends keyof T & string>(
+    value: T[],
+    property: K,
+  ): T;
+
   /**
    * Calculates the sum of an array of objects
    * based on one of their `number`, parsable `string` or `Date` property.

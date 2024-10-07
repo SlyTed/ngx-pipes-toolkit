@@ -1,12 +1,10 @@
 import { castArrayProperty, castToNumber } from './cast.helper';
 
-describe('HELPERS - Cast', () => {
-  describe('castArrayProperty()', () => {
+suite('HELPERS - Cast', () => {
+  suite('castArrayProperty()', () => {
     test('Should return empty array if empty array provided', () => {
       const data: TestModel<number>[] = [];
-      expect(castArrayProperty([] as TestModel<number>[], 'property')).toEqual(
-        [],
-      );
+      expect(castArrayProperty(data, 'property')).toEqual([]);
     });
 
     test('Should return empty array if NaN numbers', () => {
@@ -50,7 +48,7 @@ describe('HELPERS - Cast', () => {
     });
   });
 
-  describe('castToNumber()', () => {
+  suite('castToNumber()', () => {
     test('Should return NaN if NaN provided', () => {
       expect(castToNumber(Number.NaN)).toEqual(Number.NaN);
     });

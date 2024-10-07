@@ -1,7 +1,7 @@
 import { isNumberOrStringOrDate } from './type-guards.helper';
 
-describe('HELPERS - Type guards', () => {
-  describe('isNumberOrStringOrDate()', () => {
+suite('HELPERS - Type guards', () => {
+  suite('isNumberOrStringOrDate()', () => {
     test('Should return false if nil', () => {
       expect(isNumberOrStringOrDate(undefined)).toEqual(false);
       expect(isNumberOrStringOrDate(null)).toEqual(false);

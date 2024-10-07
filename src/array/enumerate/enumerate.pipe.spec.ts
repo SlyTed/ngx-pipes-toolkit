@@ -1,6 +1,6 @@
 import { EnumeratePipe } from './enumerate.pipe';
 
-describe('ARRAY - Enumerate', () => {
+suite('ARRAY - Enumerate', () => {
   let pipe: EnumeratePipe;
 
   beforeEach(() => {
