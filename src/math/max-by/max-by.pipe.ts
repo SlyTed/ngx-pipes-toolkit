@@ -19,7 +19,7 @@ export class MaxByPipe implements PipeTransform {
   transform<T extends object, K extends keyof T & string>(
     value: T[],
     property: K,
-  ): number | null;
+  ): T | null;
 
   /**
    * Returns the item with the largest value of an array of objects
